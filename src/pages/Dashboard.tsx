@@ -24,9 +24,6 @@ const Dashboard = (): JSX.Element => {
   const { theme, setTheme } = useThemeStore();
   const { userName } = useUserStore();
 
-  const user = {
-    name: "John Doe",
-  };
 
   // Temporary book data
   const temporaryBooks = [
