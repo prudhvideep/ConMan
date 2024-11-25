@@ -1,14 +1,23 @@
-import  { useState } from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import { sendPasswordResetEmail } from "firebase/auth";
 import { auth } from "../firebase/firebase";
+import { RiSunLine, RiMoonLine } from "react-icons/ri";
+import useThemeStore from "../store/themeStore";
 
 function PasswordReset() {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const [error, setError] = useState("");
+  const { theme, setTheme } = useThemeStore();
 
-  const handleSubmit = async (event : any) => {
+  const toggleTheme = () => {
+    const newTheme = theme === "dark" ? "light" : "dark";
+    setTheme(newTheme);
+    localStorage.setItem("theme", newTheme);
+  };
+
+  const handleSubmit = async (event: any) => {
     event.preventDefault();
 
     if (!email) {
@@ -20,7 +29,7 @@ function PasswordReset() {
       await sendPasswordResetEmail(auth, email);
       setMessage("Password reset email sent! Check your inbox.");
       setError("");
-    } catch (error : any) {
+    } catch (error: any) {
       const errorCode = error.code;
 
       switch (errorCode) {
@@ -40,15 +49,37 @@ function PasswordReset() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-100 flex flex-col justify-center py-6 sm:py-12 px-4 sm:px-6 lg:px-8">
+    <div className={`min-h-screen flex flex-col justify-center py-6 sm:py-12 px-4 sm:px-6 lg:px-8 ${
+      theme === "dark" ? "bg-sidebar" : "bg-gray-100"
+    }`}>
+      {/* Theme Toggle Button */}
+      <div className="absolute top-4 right-4">
+        <button
+          onClick={toggleTheme}
+          className={`p-2 rounded-lg hover:bg-opacity-10 hover:bg-gray-500 ${
+            theme === "dark" ? "text-white" : "text-gray-800"
+          }`}
+        >
+          {theme === "dark" ? (
+            <RiSunLine className="h-5 w-5" />
+          ) : (
+            <RiMoonLine className="h-5 w-5" />
+          )}
+        </button>
+      </div>
+
       <div className="sm:mx-auto sm:w-full sm:max-w-md">
-        <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">
+        <h2 className={`mt-6 text-center text-3xl font-extrabold ${
+          theme === "dark" ? "text-white" : "text-gray-900"
+        }`}>
           Reset your password
         </h2>
       </div>
 
       <div className="mt-8 sm:mx-auto sm:w-full sm:max-w-md">
-        <div className="bg-white py-8 px-4 shadow rounded-lg sm:rounded-lg sm:px-10">
+        <div className={`py-8 px-4 shadow rounded-lg sm:rounded-lg sm:px-10 ${
+          theme === "dark" ? "bg-notearea" : "bg-white"
+        }`}>
           <form className="space-y-6" onSubmit={handleSubmit}>
             {message && (
               <div className="bg-green-100 border border-green-400 text-green-700 px-4 py-2 rounded">
@@ -64,7 +95,9 @@ function PasswordReset() {
             <div>
               <label
                 htmlFor="email"
-                className="block text-sm font-medium text-gray-700"
+                className={`block text-sm font-medium ${
+                  theme === "dark" ? "text-gray-200" : "text-gray-700"
+                }`}
               >
                 Email address
               </label>
@@ -74,7 +107,11 @@ function PasswordReset() {
                 type="email"
                 autoComplete="email"
                 required
-                className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                className={`mt-1 block w-full rounded-md border-0 py-1.5 pl-2.5 shadow-sm ring-1 ring-inset focus:ring-2 outline-none  focus:ring-[#8860a9] sm:text-sm sm:leading-6 ${
+                  theme === "dark"
+                    ? "bg-sidebar text-white ring-gray-600 placeholder:text-gray-400"
+                    : "bg-white text-gray-900 ring-gray-300 placeholder:text-gray-400"
+                }`}
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
               />
@@ -83,7 +120,7 @@ function PasswordReset() {
             <div>
               <button
                 type="submit"
-                className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                className="flex w-full justify-center rounded-md bg-[#6d4d88] px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-[#8860a9]"
               >
                 Send Password Reset Email
               </button>
@@ -93,10 +130,14 @@ function PasswordReset() {
           <div className="mt-6">
             <div className="relative">
               <div className="absolute inset-0 flex items-center">
-                <div className="w-full border-t border-gray-300"></div>
+                <div className={`w-full border-t ${
+                  theme === "dark" ? "border-gray-600" : "border-gray-300"
+                }`}></div>
               </div>
               <div className="relative flex justify-center text-sm">
-                <span className="px-2 bg-white text-gray-500">
+                <span className={`px-2 ${
+                  theme === "dark" ? "bg-notearea text-gray-400" : "bg-white text-gray-500"
+                }`}>
                   Remember your password?
                 </span>
               </div>
@@ -105,7 +146,7 @@ function PasswordReset() {
             <div className="mt-6">
               <Link
                 to="/"
-                className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700"
+                className="flex w-full justify-center rounded-md bg-[#6d4d88] px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-[#8860a9]"
               >
                 Sign In
               </Link>
