@@ -12,21 +12,20 @@ import useThemeStore from "../store/themeStore";
 import useUserStore from "../store/userStore";
 
 function SignIn() {
-  const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
   const { theme, setTheme } = useThemeStore();
 
-  const {setUserName} = useUserStore();
+  const { email, userName, setEmail, setUserName } = useUserStore();
 
   const navigate = useNavigate();
 
   useEffect(() => {
     const unsubscribe = auth.onAuthStateChanged((user) => {
       if (user) {
-        const userName = user.displayName || "Anonymous User"; 
-        setUserName(userName); 
+        const userName = user.displayName || "Anonymous User";
+        setUserName(userName);
         navigate("/dashboard");
       }
     });
@@ -47,7 +46,15 @@ function SignIn() {
     if (!email || !password) return;
 
     try {
-      await signInWithEmailAndPassword(auth, email, password);
+      const resp = await signInWithEmailAndPassword(auth, email, password);
+
+      if (resp.user) {
+        setUserName(resp.user.displayName);
+        setEmail(resp.user.email);
+
+        await registerUser(email, userName);
+      }
+
       navigate("/dashboard");
     } catch (error: any) {
       const errorCode = error.code;
@@ -59,7 +66,9 @@ function SignIn() {
           setErrorMessage("This email address is invalid.");
           break;
         case "auth/user-disabled":
-          setErrorMessage("This email address is disabled by the administrator.");
+          setErrorMessage(
+            "This email address is disabled by the administrator."
+          );
           break;
         case "auth/user-not-found":
           setErrorMessage("This email address is not registered.");
@@ -79,13 +88,39 @@ function SignIn() {
     }
   };
 
+  const registerUser = async (
+    email: string | null,
+    userName: string | null
+  ) => {
+    const response = await fetch(`${import.meta.env.VITE_BASE_URL}/register`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        email: email,
+        username: userName,
+      }),
+    });
+
+    if (!response.ok) {
+      return;
+    }
+  };
+
   const handleGoogleSignIn = async () => {
     try {
       const provider = new GoogleAuthProvider();
-      const result = await signInWithPopup(auth, provider);
-      console.log("Result ----> ", result);
-      const userName = result.user.displayName;
-      console.log("User Name ----> ", userName);
+      const resp = await signInWithPopup(auth, provider);
+      console.log("Result ----> ", resp);
+
+      if (resp.user) {
+        setUserName(resp.user.displayName);
+        setEmail(resp.user.email);
+
+        await registerUser(email, userName);
+      }
+
       navigate("/dashboard");
     } catch (error: any) {
       const errorCode = error.code;
@@ -118,9 +153,11 @@ function SignIn() {
   };
 
   return (
-    <div className={`min-h-screen flex flex-col justify-center py-6 sm:py-12 px-4 sm:px-6 lg:px-8 ${
-      theme === "dark" ? "bg-sidebar" : "bg-gray-100"
-    }`}>
+    <div
+      className={`min-h-screen flex flex-col justify-center py-6 sm:py-12 px-4 sm:px-6 lg:px-8 ${
+        theme === "dark" ? "bg-sidebar" : "bg-gray-100"
+      }`}
+    >
       {/* Theme Toggle Button */}
       <div className="absolute top-4 right-4">
         <button
@@ -138,17 +175,21 @@ function SignIn() {
       </div>
 
       <div className="sm:mx-auto sm:w-full sm:max-w-sm">
-        <h2 className={`mt-6 text-center text-3xl font-extrabold ${
-          theme === "dark" ? "text-white" : "text-gray-900"
-        }`}>
+        <h2
+          className={`mt-6 text-center text-3xl font-extrabold ${
+            theme === "dark" ? "text-white" : "text-gray-900"
+          }`}
+        >
           Sign in to your account
         </h2>
       </div>
 
       <div className="mt-10 sm:mx-auto md:mx-auto sm:w-full sm:max-w-lg md:w-full md:max-w-lg">
-        <div className={`py-8 px-4 shadow rounded-lg sm:rounded-lg sm:px-10 ${
-          theme === "dark" ? "bg-notearea" : "bg-white"
-        }`}>
+        <div
+          className={`py-8 px-4 shadow rounded-lg sm:rounded-lg sm:px-10 ${
+            theme === "dark" ? "bg-notearea" : "bg-white"
+          }`}
+        >
           <form className="space-y-6" onSubmit={handleSubmit}>
             <div>
               <label
@@ -166,7 +207,7 @@ function SignIn() {
                   type="email"
                   autoComplete="email"
                   required
-                  className={`block w-full rounded-md border-0 py-1.5 pl-2.5 shadow-sm ring-1 ring-inset focus:ring-2 focus:ring-inset focus:ring-[#8860a9] sm:text-sm sm:leading-6 ${
+                  className={`block w-full outline-none rounded-md border-0 py-1.5 pl-2.5 shadow-sm ring-1 ring-inset focus:ring-2 focus:ring-inset focus:ring-[#8860a9] sm:text-sm sm:leading-6 ${
                     theme === "dark"
                       ? "bg-sidebar text-white ring-gray-600 placeholder:text-gray-400"
                       : "bg-white text-gray-900 ring-gray-300 placeholder:text-gray-400"
@@ -202,7 +243,7 @@ function SignIn() {
                   type="password"
                   autoComplete="current-password"
                   required
-                  className={`block w-full rounded-md border-0 py-1.5 pl-2.5 shadow-sm ring-1 ring-inset focus:ring-2 focus:ring-inset focus:ring-[#8860a9] sm:text-sm sm:leading-6 ${
+                  className={`outline-none block w-full rounded-md border-0 py-1.5 pl-2.5 shadow-sm ring-1 ring-inset focus:ring-2 focus:ring-inset focus:ring-[#8860a9] sm:text-sm sm:leading-6 ${
                     theme === "dark"
                       ? "bg-sidebar text-white ring-gray-600 placeholder:text-gray-400"
                       : "bg-white text-gray-900 ring-gray-300 placeholder:text-gray-400"
@@ -228,14 +269,20 @@ function SignIn() {
           <div className="mt-6">
             <div className="relative">
               <div className="absolute inset-0 flex items-center">
-                <div className={`w-full border-t ${
-                  theme === "dark" ? "border-gray-600" : "border-gray-300"
-                }`}></div>
+                <div
+                  className={`w-full border-t ${
+                    theme === "dark" ? "border-gray-600" : "border-gray-300"
+                  }`}
+                ></div>
               </div>
               <div className="relative flex justify-center text-sm">
-                <span className={`px-2 ${
-                  theme === "dark" ? "bg-notearea text-gray-400" : "bg-white text-gray-500"
-                }`}>
+                <span
+                  className={`px-2 ${
+                    theme === "dark"
+                      ? "bg-notearea text-gray-400"
+                      : "bg-white text-gray-500"
+                  }`}
+                >
                   Or continue with
                 </span>
               </div>
@@ -257,9 +304,11 @@ function SignIn() {
             </div>
           </div>
 
-          <p className={`mt-10 text-center text-sm ${
-            theme === "dark" ? "text-gray-400" : "text-gray-500"
-          }`}>
+          <p
+            className={`mt-10 text-center text-sm ${
+              theme === "dark" ? "text-gray-400" : "text-gray-500"
+            }`}
+          >
             Not a member?{" "}
             <Link
               to="/signup"
