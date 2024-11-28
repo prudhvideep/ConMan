@@ -148,7 +148,9 @@ const Dashboard = (): JSX.Element => {
 
     try {
       const response = await fetch(
-        `http://121.41.33.45:31001/elasticsearch/summary?query="${query}"`
+        `${
+          import.meta.env.VITE_BASE_URL
+        }/elasticsearch/summary?query="${query}"`
       );
 
       if (!response.ok) {
@@ -177,7 +179,11 @@ const Dashboard = (): JSX.Element => {
 
     try {
       const response = await fetch(
-        `http://121.41.33.45:31001/elasticsearch/filter?author=${filter.author}&title=${filter.title}&genere=${filter.genre}&isbn=${filter.isbn}&publisher=${filter.publisher}`
+        `${import.meta.env.VITE_BASE_URL}/elasticsearch/filter?author=${
+          filter.author
+        }&title=${filter.title}&genere=${filter.genre}&isbn=${
+          filter.isbn
+        }&publisher=${filter.publisher}`
       );
 
       if (!response.ok) {
