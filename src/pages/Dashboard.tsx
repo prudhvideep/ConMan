@@ -59,8 +59,8 @@ const Dashboard = (): JSX.Element => {
   const [searchResults, setSearchResults] = useState<book[]>([]);
   const [selectedBook, setSelectedBook] = useState<book | null>();
   const [showBookModal, setShowBookModal] = useState(false);
-  // const [showSuggestions, setShowSuggestions] = useState(false);
-  // const [suggestions,setSuggestions] = useState<book[]>([])
+  const [showSuggestions, setShowSuggestions] = useState(false);
+  const [suggestions, setSuggestions] = useState<book[]>([]);
   const popularResources = [
     {
       id: 2,
@@ -222,6 +222,16 @@ const Dashboard = (): JSX.Element => {
     buildHistory(book);
   }
 
+  function handleSuggestionSelection(book: book) {
+    console.log("Book selected ---> ", book);
+    setShowSuggestions(false);
+    setSuggestions([]);
+    setSelectedBook(book);
+    setShowBookModal(true);
+
+    buildHistory(book);
+  }
+
   async function buildHistory(selectedBook: book) {
     const response = await fetch(`${import.meta.env.VITE_BASE_URL}/read`, {
       method: "POST",
@@ -245,6 +255,36 @@ const Dashboard = (): JSX.Element => {
     setSearching(false);
     setShowResults(false);
     setSearchResults([]);
+  }
+
+  async function handleFetchSuggestions() {
+    console.log("Calling fetch suggestions");
+    setShowSuggestions(true);
+
+    const response = await fetch(
+      `${import.meta.env.VITE_BASE_URL}/elasticsearch/customize`,
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          email: email,
+        }),
+      }
+    );
+
+    if (!response.ok) {
+      alert("Error fetching suggestions");
+      setShowSuggestions(false);
+      setSuggestions([]);
+      return;
+    }
+
+    const respObj = await response.json();
+    if (respObj.data) {
+      setSuggestions(respObj.data);
+    }
   }
 
   return (
@@ -341,13 +381,16 @@ const Dashboard = (): JSX.Element => {
           </div>
           <div>
             <button
+              onClick={() => {
+                handleFetchSuggestions();
+              }}
               className={` p-2 pl-2 pr-2 rounded-md ${
                 theme === "dark"
                   ? "bg-[#8860a9] text-slate-200 hover:text-slate-100"
                   : "text-gray-800 bg-[#a474ca]"
               }  hover:scale-105`}
             >
-              Suggested Titles
+              Suggest Titles
             </button>
           </div>
         </div>
@@ -898,6 +941,89 @@ const Dashboard = (): JSX.Element => {
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+      )}
+      {showSuggestions && (
+        <div className="transition-all ease-in-out duration-500 fixed inset-0 bg-black bg-opacity-50 flex items-start justify-center z-50 overflow-y-scroll">
+          <div
+            className={`max-w-2xl mt-10 w-9/10 md:w-full border dark:border-gray-500 rounded-lg p-6 
+             ${
+               theme === "dark"
+                 ? "bg-notearea border-gray-500"
+                 : "bg-white border-gray-200"
+             }`}
+          >
+            {
+              <div className="max-h-lg flex flex-col gap-2">
+                <div className="flex flex-row justify-between items-center">
+                  <p
+                    className={`mt-2 mb-2 text-xl  ${
+                      theme === "dark" ? "text-gray-300" : "text-gray-800"
+                    }`}
+                  >
+                    {suggestions.length === 0 ? (
+                      <span className="text-[#a474ca] animate-pulse">
+                        Fetching suggestions
+                      </span>
+                    ) : (
+                      "Suggestions"
+                    )}
+                  </p>
+                  <button
+                    onClick={() => setShowModal(false)}
+                    className={`${
+                      theme === "dark"
+                        ? "text-gray-400 hover:text-white"
+                        : "text-gray-600 hover:text-gray-800"
+                    } flex items-end`}
+                  >
+                    <RiCloseLine
+                      className={`text-2xl`}
+                      onClick={() => {
+                        setSuggestions([])
+                        setShowSuggestions(false);
+                      }}
+                    />
+                  </button>
+                </div>
+
+                {Array.isArray(suggestions) &&
+                  suggestions.map((book) => (
+                    <div
+                      key={book.id}
+                      onClick={() => handleSuggestionSelection(book)}
+                      className={` ${
+                        theme === "dark" ? "bg-zinc-800" : "bg-zinc-200"
+                      } shadow-sm hover:cursor-pointer hover:border-[#8860a9] hover:border mt-2 rounded-md p-4 w-full hover:scale-105 transition-all ease-in-out delay-75 duration-500`}
+                    >
+                      <div className="flex felx-row justify-between">
+                        <div className="flex flex-col">
+                          <p
+                            className={`text-xl ${
+                              theme === "dark"
+                                ? "text-gray-200"
+                                : "text-gray-800"
+                            } `}
+                          >
+                            {book.title}
+                          </p>
+
+                          <p
+                            className={`text-md ${
+                              theme === "dark"
+                                ? "text-gray-200"
+                                : "text-gray-800"
+                            }`}
+                          >
+                            {book.author.join(",")}
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+              </div>
+            }
           </div>
         </div>
       )}
