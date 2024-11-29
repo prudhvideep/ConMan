@@ -341,7 +341,7 @@ const Dashboard = (): JSX.Element => {
           </div>
           <div>
             <button
-              className={`hidden p-2 pl-2 pr-2 rounded-md ${
+              className={` p-2 pl-2 pr-2 rounded-md ${
                 theme === "dark"
                   ? "bg-[#8860a9] text-slate-200 hover:text-slate-100"
                   : "text-gray-800 bg-[#a474ca]"

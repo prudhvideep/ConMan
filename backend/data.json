@@ -1,0 +1,606 @@
+
+[
+    {
+        "title": "Java: The Complete Reference, Thirteenth Edition",
+        "author": ["Herbert Schildt", "Danny Coward"],
+        "genre": "Science",
+        "summary": "The definitive guide to Java programming--thoroughly revised for Java SE 21",
+        "ISBN-13": "9781265058432",
+        "publisher": "McGraw-Hill Companies",
+        "publication_date": "2024-1-11",
+        "search_times": 0
+    },
+    {
+        "title": "African Ghost Short Stories (Gothic Fantasy)",
+        "author": ["Nuzo Onoh", "Divine Che Neba", "Chinelo Onwualu"],
+        "genre": "Fiction",
+        "summary": "Following the hugely successful Black Sci-Fi Short Stories and Asian Ghost Short Stories, comes this deluxe edition of new African writing and tales rooted in ancient culture. This collection explores the deep-seated supernatural element in African storytelling whether reaching back to the spirits, ancestors and ogres of folklore or the vibrantly modern ghosts of today's African horror. New and contemporary stories complement poignant folktales such as from Nigeria.",
+        "ISBN-13": "9781804177976",
+        "publisher": "Flame Tree Collections",
+        "publication_date": "2024-5-14",
+        "edition": 3,
+        "search_times": 0
+    },
+    {
+        "title": "Artificial Intelligence: A Modern Approach",
+        "author": ["Stuart Russell", "Peter Norvig"],
+        "genre": "Science",
+        "summary": "The definitive guide to AI, covering all key areas from algorithms to ethics in AI development.",
+        "ISBN-13": "9780134610993",
+        "publisher": "Pearson",
+        "publication_date": "2024-2-15",
+        "edition": 4,
+        "search_times": 0
+    },
+    {
+        "title": "Mystery in the Woods",
+        "author": ["Ava King"],
+        "genre": "Fiction",
+        "summary": "A gripping mystery novel that explores the secrets hidden deep in an ancient forest.",
+        "ISBN-13": "9780994567890",
+        "publisher": "Blackstone Publishing",
+        "publication_date": "2024-7-20",
+        "edition": 2,
+        "search_times": 0
+    },
+    {
+        "title": "History of Modern Warfare",
+        "author": ["Douglas Johnson"],
+        "genre": "History",
+        "summary": "A comprehensive history of modern warfare, from the Napoleonic Wars to the present day.",
+        "ISBN-13": "9780198815375",
+        "publisher": "Oxford University Press",
+        "publication_date": "2024-6-5",
+        "search_times": 0
+    },
+    {
+        "title": "The Future of Space Exploration",
+        "author": ["Brian Cox", "Jeffrey Bennett"],
+        "genre": "Science",
+        "summary": "Explores the scientific and technological advances that will shape the future of space exploration.",
+        "ISBN-13": "9780691196230",
+        "publisher": "Princeton University Press",
+        "publication_date": "2024-09-3",
+        "search_times": 0
+    },
+    {
+        "title": "The Quantum Realm",
+        "author": ["Nathaniel Webb"],
+        "genre": "Science",
+        "summary": "A deep dive into the strange and fascinating world of quantum mechanics and its implications for the universe.",
+        "ISBN-13": "9781234567890",
+        "publisher": "Wiley",
+        "publication_date": "2024-08-22",
+        "search_times": 0
+    },
+    {
+        "title": "The Haunting of Marlow House",
+        "author": ["Jessica Hunt"],
+        "genre": "Fiction",
+        "summary": "A spine-chilling ghost story set in a long-abandoned mansion with a dark past.",
+        "ISBN-13": "9781800345762",
+        "publisher": "Flame Tree Collections",
+        "publication_date": "2024-10-12",
+        "search_times": 0
+    },
+    {
+        "title": "The Great Civilizations of the Ancient World",
+        "author": ["Robert Green"],
+        "genre": "History",
+        "summary": "Explores the rise and fall of ancient civilizations, from Mesopotamia to the Roman Empire.",
+        "ISBN-13": "9780385538320",
+        "publisher": "Random House",
+        "publication_date": "2024-11-05",
+        "search_times": 0
+    },
+    {
+        "title": "Data Science for Beginners",
+        "author": ["Emily Roberts"],
+        "genre": "Non-Fiction",
+        "summary": "An easy-to-follow introduction to the concepts and techniques of data science.",
+        "ISBN-13": "9781492056226",
+        "publisher": "O'Reilly Media",
+        "publication_date": "2024-6-30",
+        "search_times": 0
+    },
+    {
+        "title": "Tales of the Unknown",
+        "author": ["Liam Bennett", "Sarah Brooks"],
+        "genre": "Fiction",
+        "summary": "A collection of eerie and captivating short stories that explore the boundaries between reality and the supernatural.",
+        "ISBN-13": "9781406345954",
+        "publisher": "HarperCollins",
+        "publication_date": "2024-4-17",
+        "search_times": 0
+    },
+    {
+        "title": "Tech Innovations and Their Impact",
+        "author": ["Michael Carter"],
+        "genre": "Non-Fiction",
+        "summary": "An examination of the latest technological innovations and how they are shaping the future of society.",
+        "ISBN-13": "9781449356841",
+        "publisher": "TechPress",
+        "publication_date": "2024-1-28",
+        "search_times": 0
+    },
+    {
+        "title": "Adventures of the Mind",
+        "author": ["Sophie Leclerc"],
+        "genre": "Fiction",
+        "summary": "A young adventurer embarks on a journey through a world where imagination shapes reality.",
+        "ISBN-13": "9780593224327",
+        "publisher": "Macmillan",
+        "publication_date": "2024-7-11",
+        "search_times": 0
+    },
+    {
+        "title": "Understanding AI Ethics",
+        "author": ["Martin Adams"],
+        "genre": "Non-Fiction",
+        "summary": "A thorough look at the ethical implications of artificial intelligence and its impact on society.",
+        "ISBN-13": "9781138901421",
+        "publisher": "Routledge",
+        "publication_date": "2024-5-20",
+        "search_times": 0
+    },
+    {
+        "title": "The Philosophy of Science",
+        "author": ["Alfred White"],
+        "genre": "Non-Fiction",
+        "summary": "A critical exploration of the philosophical questions surrounding the scientific method and scientific discovery.",
+        "ISBN-13": "9780198737733",
+        "publisher": "Oxford University Press",
+        "publication_date": "2024-03-14",
+        "search_times": 0
+    },
+    {
+        "title": "The Ghost of Blackwood Manor",
+        "author": ["Rebecca Leigh"],
+        "genre": "Fiction",
+        "summary": "A chilling gothic tale set in a haunted manor where dark secrets threaten to consume those who enter.",
+        "ISBN-13": "9781804131280",
+        "publisher": "Flame Tree Collections",
+        "publication_date": "2024-10-25",
+        "search_times": 0
+    },
+    {
+        "title": "The Origins of the Universe",
+        "author": ["George Ellis"],
+        "genre": "Science",
+        "summary": "A scientific and philosophical exploration of how the universe began and the fundamental forces at play.",
+        "ISBN-13": "9780521760257",
+        "publisher": "Cambridge University Press",
+        "publication_date": "2024-6-12",
+        "search_times": 0
+    },
+    {
+        "title": "Exploring Ancient Egypt",
+        "author": ["Hannah Gill"],
+        "genre": "History",
+        "summary": "An in-depth study of ancient Egyptian civilization, its culture, religion, and technological achievements.",
+        "ISBN-13": "9780300185923",
+        "publisher": "Yale University Press",
+        "publication_date": "2024-8-18",
+        "search_times": 0
+    },
+    {
+        "title": "Living with AI",
+        "author": ["Anna Roberts", "John Smith"],
+        "genre": "Non-Fiction",
+        "summary": "An insightful look into how artificial intelligence is transforming our daily lives and the challenges ahead.",
+        "ISBN-13": "9780008296974",
+        "publisher": "HarperCollins",
+        "publication_date": "2024-5-3",
+        "search_times": 0
+    },
+    {
+        "title": "Ghost Stories from the South",
+        "author": ["Mark Wilson", "Jennifer Hayes"],
+        "genre": "Fiction",
+        "summary": "A collection of eerie and atmospheric ghost stories set in the American South, blending folklore with suspense.",
+        "ISBN-13": "9781780304024",
+        "publisher": "Penguin Random House",
+        "publication_date": "2024-11-7",
+        "search_times": 0
+    },
+    {
+        "title": "Deep Dive into the Ocean",
+        "author": ["Clara Johnson"],
+        "genre": "Science",
+        "summary": "A fascinating exploration of the world's oceans, uncovering mysteries of marine life, ecosystems, and environmental issues.",
+        "ISBN-13": "9780300235474",
+        "publisher": "University of Chicago Press",
+        "publication_date": "2024-2-9",
+        "search_times": 0
+    },
+    {
+        "title": "Neural Networks: A Practical Guide",
+        "author": ["David Patterson", "Andrew Ng"],
+        "genre": "Science",
+        "summary": "A hands-on approach to understanding and building neural networks for machine learning applications.",
+        "ISBN-13": "9780128152682",
+        "publisher": "Elsevier",
+        "publication_date": "2024-5-30",
+        "search_times": 0
+    },
+    {
+        "title": "The Shadows of London",
+        "author": ["Olivia Stone"],
+        "genre": "Fiction",
+        "summary": "A historical fiction novel that uncovers the dark secrets of Victorian London.",
+        "ISBN-13": "9781910220795",
+        "publisher": "HarperCollins",
+        "publication_date": "2024-7-3",
+        "search_times": 0
+    },
+    {
+        "title": "Understanding Machine Learning",
+        "author": ["Shai Shalev-Shwartz", "Shai Ben-David"],
+        "genre": "Science",
+        "summary": "A comprehensive guide to machine learning algorithms, theory, and applications.",
+        "ISBN-13": "9781107149861",
+        "publisher": "Cambridge University Press",
+        "publication_date": "2024-6-15",
+        "search_times": 0
+    },
+    {
+        "title": "Revolutionary War: A New Perspective",
+        "author": ["Richard D. Brown"],
+        "genre": "History",
+        "summary": "A fresh look at the American Revolutionary War, offering new insights into its causes and consequences.",
+        "ISBN-13": "9780674545940",
+        "publisher": "Harvard University Press",
+        "publication_date": "2024-8-10",
+        "search_times": 0
+    },
+    {
+        "title": "Digital Transformation in Healthcare",
+        "author": ["Michael Anderson"],
+        "genre": "Non-Fiction",
+        "summary": "Examining how digital technologies are transforming the healthcare industry and improving patient care.",
+        "ISBN-13": "9780323834137",
+        "publisher": "Elsevier",
+        "publication_date": "2024-9-1",
+        "search_times": 0
+    },
+    {
+        "title": "The Dark Forest",
+        "author": ["Cixin Liu"],
+        "genre": "Fiction",
+        "summary": "A captivating science fiction novel that explores humanity's efforts to survive an impending alien invasion.",
+        "ISBN-13": "9780765377067",
+        "publisher": "Tor Books",
+        "publication_date": "2024-4-12",
+        "search_times": 0
+    },
+    {
+        "title": "The History of Ancient Rome",
+        "author": ["Mary Beard"],
+        "genre": "History",
+        "summary": "A thorough exploration of Ancient Rome's history, politics, and culture, from its origins to its fall.",
+        "ISBN-13": "9780141026185",
+        "publisher": "Penguin Books",
+        "publication_date": "2024-7-25",
+        "search_times": 0
+    },
+    {
+        "title": "The Science of Happiness",
+        "author": ["Stefan Klein"],
+        "genre": "Non-Fiction",
+        "summary": "An exploration of the science behind happiness, featuring psychological insights and practical tips for well-being.",
+        "ISBN-13": "9781555979645",
+        "publisher": "Graywolf Press",
+        "publication_date": "2024-2-10",
+        "search_times": 0
+    },
+    {
+        "title": "Urban Legends: The Truth Behind the Myths",
+        "author": ["Amanda Winters"],
+        "genre": "Non-Fiction",
+        "summary": "A fascinating investigation into the origins and facts behind some of the most popular urban legends.",
+        "ISBN-13": "9780062371644",
+        "publisher": "HarperCollins",
+        "publication_date": "2024-3-30",
+        "search_times": 0
+    },
+    {
+        "title": "The Road to the Stars",
+        "author": ["Neil deGrasse Tyson"],
+        "genre": "Science",
+        "summary": "An engaging exploration of space and the future of human exploration beyond our planet.",
+        "ISBN-13": "9780393354245",
+        "publisher": "W.W. Norton & Company",
+        "publication_date": "2024-6-22",
+        "search_times": 0
+    },
+    {
+        "title": "The Haunted House on Hawthorne Hill",
+        "author": ["Lucy Hill"],
+        "genre": "Fiction",
+        "summary": "A supernatural thriller set in a haunted house where a group of strangers must confront their darkest fears.",
+        "ISBN-13": "9781594933367",
+        "publisher": "Flame Tree Collections",
+        "publication_date": "2024-8-5",
+        "search_times": 0
+    },
+    {
+        "title": "AI and the Future of Work",
+        "author": ["Richard Susskind"],
+        "genre": "Non-Fiction",
+        "summary": "How artificial intelligence is reshaping the workplace and what it means for future careers.",
+        "ISBN-13": "9780198846300",
+        "publisher": "Oxford University Press",
+        "publication_date": "2024-4-23",
+        "search_times": 0
+    },
+    {
+        "title": "The Witch's Curse",
+        "author": ["Sylvia P. Simmons"],
+        "genre": "Fiction",
+        "summary": "A young woman uncovers a centuries-old curse that could change the course of her life forever.",
+        "ISBN-13": "9781804172954",
+        "publisher": "Flame Tree Collections",
+        "publication_date": "2024-10-15",
+        "search_times": 0
+    },
+    {
+        "title": "The Complete History of World War II",
+        "author": ["John Keegan"],
+        "genre": "History",
+        "summary": "A detailed and accessible history of World War II, with a focus on the military and political events that shaped the war.",
+        "ISBN-13": "9780307277534",
+        "publisher": "Vintage Books",
+        "publication_date": "2024-9-10",
+        "search_times": 0
+    },
+    {
+        "title": "Cybersecurity Essentials",
+        "author": ["Mark Stanfield"],
+        "genre": "Non-Fiction",
+        "summary": "A guide to understanding and implementing cybersecurity practices to protect against modern cyber threats.",
+        "ISBN-13": "9781119260337",
+        "publisher": "Wiley",
+        "publication_date": "2024-6-1",
+        "search_times": 0
+    },
+    {
+        "title": "The Age of Exploration",
+        "author": ["Helen Wright"],
+        "genre": "History",
+        "summary": "An in-depth study of the Age of Exploration, examining the voyages that shaped global trade and discovery.",
+        "ISBN-13": "9780195150326",
+        "publisher": "Oxford University Press",
+        "publication_date": "2024-10-1",
+        "search_times": 0
+    },
+    {
+        "title": "The Secrets of Artificial Intelligence",
+        "author": ["David Silver", "Demis Hassabis"],
+        "genre": "Science",
+        "summary": "An insider's look into the advances in artificial intelligence and the breakthroughs that will shape its future.",
+        "ISBN-13": "9780062914157",
+        "publisher": "HarperCollins",
+        "publication_date": "2024-7-18",
+        "search_times": 0
+    },
+    {
+        "title": "Mysterious Realms of the Past",
+        "author": ["Oliver Thomas"],
+        "genre": "Fiction",
+        "summary": "A fantasy novel where a group of adventurers explore ancient ruins filled with dangerous secrets.",
+        "ISBN-13": "9780691174993",
+        "publisher": "Tor Books",
+        "publication_date": "2024-11-6",
+        "search_times": 0
+    },
+    {
+        "title": "AI in Healthcare: Transforming the Future",
+        "author": ["Lisa Clark", "James Miller"],
+        "genre": "Non-Fiction",
+        "summary": "Explores the applications of AI in healthcare, from diagnostics to personalized treatment plans.",
+        "ISBN-13": "9780128222355",
+        "publisher": "Elsevier",
+        "publication_date": "2024-11-1",
+        "search_times": 0
+    },
+    {
+        "title": "The Art of Machine Learning",
+        "author": ["Tom Mitchell", "Jeffrey Ullman"],
+        "genre": "Science",
+        "summary": "An in-depth exploration of machine learning algorithms and their applications.",
+        "ISBN-13": "9780262038533",
+        "publisher": "MIT Press",
+        "publication_date": "2024-9-18",
+        "search_times": 0
+    },
+    {
+        "title": "A Journey Through Time",
+        "author": ["Dan Brown"],
+        "genre": "Fiction",
+        "summary": "A thrilling historical mystery that takes readers on an unforgettable journey through time.",
+        "ISBN-13": "9780385504201",
+        "publisher": "Doubleday",
+        "publication_date": "2024-8-10",
+        "search_times": 0
+    },
+    {
+        "title": "The Modern History of Computing",
+        "author": ["Donald Knuth"],
+        "genre": "Non-Fiction",
+        "summary": "A detailed history of computing, from early machines to modern technologies.",
+        "ISBN-13": "9780201485420",
+        "publisher": "Addison-Wesley",
+        "publication_date": "2024-5-12",
+        "search_times": 0
+    },
+    {
+        "title": "Deep Learning in Practice",
+        "author": ["Yann LeCun", "Geoffrey Hinton"],
+        "genre": "Science",
+        "summary": "A comprehensive guide to the concepts and algorithms used in deep learning.",
+        "ISBN-13": "9780128150804",
+        "publisher": "Elsevier",
+        "publication_date": "2024-6-22",
+        "search_times": 0
+    },
+    {
+        "title": "The Ancient Greeks and Their Legacy",
+        "author": ["Victor Davis Hanson"],
+        "genre": "History",
+        "summary": "An exploration of ancient Greek history and its lasting influence on Western civilization.",
+        "ISBN-13": "9780195308353",
+        "publisher": "Oxford University Press",
+        "publication_date": "2024-7-3",
+        "search_times": 0
+    },
+    {
+        "title": "Programming Fundamentals with Java",
+        "author": ["Herbert Schildt"],
+        "genre": "Science",
+        "summary": "An essential guide to learning Java programming from the ground up.",
+        "ISBN-13": "9781260467351",
+        "publisher": "McGraw-Hill",
+        "publication_date": "2024-10-15",
+        "search_times": 0
+    },
+    {
+        "title": "The Future of AI",
+        "author": ["Stuart Russell", "Peter Norvig"],
+        "genre": "Science",
+        "summary": "A forward-looking book on the future implications and advancements in artificial intelligence.",
+        "ISBN-13": "9780132046216",
+        "publisher": "Pearson",
+        "publication_date": "2024-4-19",
+        "search_times": 0
+    },
+    {
+        "title": "Cryptography and Network Security",
+        "author": ["William Stallings"],
+        "genre": "Science",
+        "summary": "An in-depth look at cryptography, network security, and their applications in the digital world.",
+        "ISBN-13": "9780134444284",
+        "publisher": "Pearson",
+        "publication_date": "2024-6-17",
+        "search_times": 0
+    },
+    {
+        "title": "The War of the Worlds",
+        "author": ["H.G. Wells"],
+        "genre": "Fiction",
+        "summary": "A classic science fiction novel about an alien invasion of Earth.",
+        "ISBN-13": "9781853260314",
+        "publisher": "Wordsworth Editions",
+        "publication_date": "2024-7-22",
+        "search_times": 0
+    },
+    {
+        "title": "The Evolution of Society",
+        "author": ["Émile Durkheim"],
+        "genre": "History",
+        "summary": "A sociological study on the evolution of society, its structures, and collective consciousness.",
+        "ISBN-13": "9780743245467",
+        "publisher": "Free Press",
+        "publication_date": "2024-11-1",
+        "search_times": 0
+    },
+    {
+        "title": "The Principles of Quantum Physics",
+        "author": ["Albert Einstein", "Niels Bohr"],
+        "genre": "Science",
+        "summary": "A groundbreaking book that explains the fundamentals of quantum physics.",
+        "ISBN-13": "9780486670360",
+        "publisher": "Dover Publications",
+        "publication_date": "2024-10-4",
+        "search_times": 0
+    },
+    {
+        "title": "The Science of Sleep",
+        "author": ["Matthew Walker"],
+        "genre": "Non-Fiction",
+        "summary": "An exploration of the science of sleep and its effects on human health.",
+        "ISBN-13": "9781501144314",
+        "publisher": "Simon & Schuster",
+        "publication_date": "2024-6-8",
+        "search_times": 0
+    },
+    {
+        "title": "The Code Breaker",
+        "author": ["Walter Isaacson"],
+        "genre": "Non-Fiction",
+        "summary": "A biography of Jennifer Doudna and the invention of CRISPR, the gene-editing technology.",
+        "ISBN-13": "9781982115852",
+        "publisher": "Simon & Schuster",
+        "publication_date": "2024-3-10",
+        "search_times": 0
+    },
+    {
+        "title": "Artificial Intelligence: A Modern Approach",
+        "author": ["Stuart Russell", "Peter Norvig"],
+        "genre": "Science",
+        "summary": "An essential textbook on artificial intelligence, covering theory and practical applications.",
+        "ISBN-13": "9780134610993",
+        "publisher": "Pearson",
+        "publication_date": "2024-9-1",
+        "search_times": 0
+    },
+    {
+        "title": "The Jungle Book",
+        "author": ["Rudyard Kipling"],
+        "genre": "Fiction",
+        "summary": "A collection of stories about Mowgli, a young boy raised by wolves in the jungle of India.",
+        "ISBN-13": "9780143039645",
+        "publisher": "Penguin Classics",
+        "publication_date": "2024-5-26",
+        "search_times": 0
+    },
+    {
+        "title": "The Human Genome",
+        "author": ["Francis Collins"],
+        "genre": "Non-Fiction",
+        "summary": "An exploration of the human genome and its role in shaping our health and behavior.",
+        "ISBN-13": "9780061154933",
+        "publisher": "HarperOne",
+        "publication_date": "2024-11-12",
+        "search_times": 0
+    },
+    {
+        "title": "Digital Fortress",
+        "author": ["Dan Brown"],
+        "genre": "Fiction",
+        "summary": "A fast-paced thriller involving cryptography, secrets, and the power of government surveillance.",
+        "ISBN-13": "9780552160913",
+        "publisher": "Corgi Books",
+        "publication_date": "2024-7-5",
+        "search_times": 0
+    },
+    {
+        "title": "Introduction to Algorithms",
+        "author": ["Thomas H. Cormen", "Charles E. Leiserson", "Ronald L. Rivest"],
+        "genre": "Science",
+        "summary": "A comprehensive textbook on algorithms, widely used in computer science education.",
+        "ISBN-13": "9780262033842",
+        "publisher": "MIT Press",
+        "publication_date": "2024-5-3",
+        "search_times": 0
+    },
+    {
+        "title": "Physics of the Future",
+        "author": ["Michio Kaku"],
+        "genre": "Science",
+        "summary": "A visionary look at the future of science and technology, and how they will shape our world.",
+        "ISBN-13": "9780385530812",
+        "publisher": "Doubleday",
+        "publication_date": "2024-9-5",
+        "search_times": 0
+    },
+    {
+        "title": "The Great Gatsby",
+        "author": ["F. Scott Fitzgerald"],
+        "genre": "Fiction",
+        "summary": "The classic American novel of love, obsession, and the American Dream in the 1920s.",
+        "ISBN-13": "9780743273565",
+        "publisher": "Scribner",
+        "publication_date": "2024-6-30",
+        "search_times": 0
+    }
+]

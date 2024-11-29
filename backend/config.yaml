@@ -1,0 +1,5 @@
+cloud_id: "8485e83977f14bba92aa214d67f3b8a7:dXMtY2VudHJhbDEuZ2NwLmNsb3VkLmVzLmlvOjQ0MyQzZDNlODFkYmVkMzc0ODIzYTA5ZTgyMGRjOWJiZGJlZCQ5MzUzMzE5N2M0OGI0NWVhOTQxNDU1YWI4Y2Q5MmQzMw=="
+api_key: "SW5pdmRaTUJBaG4xOTk1eWgtVEc6c05sdXEtQzlScGF5NGN6TS1BSzl5dw=="
+mongodb_url: "mongodb+srv://ktan24:mongodb@cluster0.t9a5q.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
+data_url: "https://raw.githubusercontent.com/Kaiyuan-Tan/CSE-512-group-project/refs/heads/main/books.json"
+port: 31001
